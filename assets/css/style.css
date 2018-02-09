@@ -1,0 +1,136 @@
+/*
+  Reset styles
+*/
+
+html {
+  margin-bottom: 60px; /* making room for footer */
+}
+body {
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  padding-bottom: 40%;
+  /* adding a background image which may have issues with browser support */
+  background-image: url("https://gifimage.net/wp-content/uploads/2017/10/html-gif-background-6.gif");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: bottom;
+  /* bg color makes the image look taller and is a fallback for old browsers */
+  background-color: #2553A0;
+}
+a:hover, a:focus, a:active {
+  text-decoration: none;
+}
+.col > .row , [class^="col-"] > .row, nav {
+  background-color: white;
+}
+hr {
+  border: 1px solid #dddddd;
+  width: 100%;
+  margin: 16px 15px;
+}
+
+/*
+  Reusable styles
+*/
+.center {
+  margin: auto;
+}
+.heading {
+  font-family: 'Georgia', Times, Times New Roman, serif;
+  font-size: 2rem;
+  color: #4aaaa5;
+}
+.holder {
+  width: auto;
+  display: inline-block;
+}
+.col-border {
+  border: 2px solid #cccccc;
+  padding: 0 15px;
+}
+
+/*
+  Specific styles
+*/
+
+/* Navbar */
+.navbar {
+  padding: 0;
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 2px solid #cccccc;
+}
+.navbar > .container {
+  height: 100%;
+  padding: 0;
+}
+.navbar-brand {
+  padding: 0 15px;
+  margin: 0;
+  background-color: #4aaaa5;
+  color: white !important;
+  font-size: 2rem;
+}
+.collapse.show, .collapsing {
+  position: absolute;
+  top: 60px; /* leaving room for the navbar */
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+#nav-item-container {
+  padding-right: 0;
+}
+
+/* Sidebar */
+#icon-container > a {
+  margin-right: 8px;
+}
+#icon-container > a:last-of-type {
+  margin-right: 0px;
+}
+.fa-github-square {
+  color: black;
+}
+.fa-linkedin {
+  color: #0084BF;
+}
+.fa-stack-overflow {
+  color: #F48024;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: 4px solid #4aaaa5;
+  height: 60px;
+  line-height: 60px;
+  background-color: #666666;
+  color: #dddddd;
+  text-align: center;
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar-nav {
+    float: right;
+  }
+}
+@media only screen and (max-width: 991px) {
+  /* hide the vertical lines that seperate nav-links */
+  .hide-md {
+    display: none;
+  }
+  .heading {
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .hide-md {
+    display: none;
+  }
+  .navbar {
+    padding-left: 15px;
+  }
+}

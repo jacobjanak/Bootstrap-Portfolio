@@ -1,0 +1,11 @@
+/* About */
+#profile-picture {
+  float: left;
+  display: inline-block;
+  width: 240px;
+  height: auto;
+}
+#profile-picture > img {
+  width: 100%;
+  height: 100%;
+}
