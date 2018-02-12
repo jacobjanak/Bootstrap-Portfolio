@@ -1,21 +1,20 @@
-
+/* Portfolio */
 .project-wrapper {
   padding: 15px 30px;
 }
-
 .project-overlay {
   position: absolute;
   left: 30px; /* account for padding of wrapper */
   right: 30px; /* account for padding of wrapper */
+  /* parent's padding doesn't affect absolute position child elements */
   bottom: 25px;
   height: 40px;
-  line-height: 40px; /* same as height for vertically-centered text */
+  line-height: 40px; /* same as height which achieves vertically-centered text */
   background-color: #4aaaa5;
   color: white;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* this makes the font 50% larger than it would be */
 }
-
 .project-image {
   width: 100%;
 }

@@ -7,21 +7,25 @@ html {
 }
 body {
   font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-  padding-bottom: 40%;
-  /* adding a background image which may have issues with browser support */
+  padding-bottom: 40%; /* creating space for my background-image to be displayed correctly */
+  /* adding a bg image which may have issues with browser support (sorry internet explorer) */
   background-image: url("https://gifimage.net/wp-content/uploads/2017/10/html-gif-background-6.gif");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: bottom;
-  /* bg color makes the image look taller and is a fallback for old browsers */
+  /* bg color makes my image look taller and is a fallback for old browsers */
   background-color: #2553A0;
 }
+/* remove ugly default <a> styles */
 a:hover, a:focus, a:active {
   text-decoration: none;
 }
+/* making all my rows that are within columns white */
+/* I can't just make all rows white or else my whole page would be white */
 .col > .row , [class^="col-"] > .row, nav {
   background-color: white;
 }
+/* changing the hr styles to match our theme */
 hr {
   border: 1px solid #dddddd;
   width: 100%;
@@ -43,6 +47,7 @@ hr {
   width: auto;
   display: inline-block;
 }
+/* this will be used to give a nice border to my col's */
 .col-border {
   border: 2px solid #cccccc;
   padding: 0 15px;
@@ -56,9 +61,11 @@ hr {
 .navbar {
   padding: 0;
   height: 60px;
-  line-height: 60px;
+  line-height: 60px; /* vertically centers text since it's same as height */
   border-bottom: 2px solid #cccccc;
 }
+/* arrow selectors apply styles to child elements of a specific parent.
+  in this case the parent is .navbar and the child must be a .container */
 .navbar > .container {
   height: 100%;
   padding: 0;
@@ -67,9 +74,10 @@ hr {
   padding: 0 15px;
   margin: 0;
   background-color: #4aaaa5;
-  color: white !important;
-  font-size: 2rem;
+  color: white !important; /* !important here forcefully overwrites a style applied by bootstrap */
+  font-size: 2rem; /* 2rem means 200% size text based on whatever it wpuld normally be */
 }
+/* IDK why bootstrap 4 is lacking this but I had to fix my navbar on mobile screens */
 .collapse.show, .collapsing {
   position: absolute;
   top: 60px; /* leaving room for the navbar */
@@ -78,7 +86,7 @@ hr {
   background-color: white;
 }
 #nav-item-container {
-  padding-right: 0;
+  padding-right: 0; /* removing padding applied by bootstrap to .container's */
 }
 
 /* Sidebar */
@@ -86,8 +94,11 @@ hr {
   margin-right: 8px;
 }
 #icon-container > a:last-of-type {
+  /* I don't need any margin-right on the last <a> element
+    because there won't be anything on the right side */
   margin-right: 0px;
 }
+/* here are my icons which are actually just text so I can color them using color */
 .fa-github-square {
   color: black;
 }
@@ -106,13 +117,17 @@ footer {
   bottom: 0;
   border-top: 4px solid #4aaaa5;
   height: 60px;
-  line-height: 60px;
+  line-height: 60px; /* same as height so text will be vertically centered */
   background-color: #666666;
   color: #dddddd;
   text-align: center;
 }
 
+
+/* applying some media queries to my super-snazzy and responsive navbar
+  so that it looks good on all devices */
 @media only screen and (min-width: 992px) {
+  /* on desktop browsers I want my nav links on the right side of page */
   .navbar-nav {
     float: right;
   }
@@ -127,9 +142,6 @@ footer {
   }
 }
 @media only screen and (max-width: 575px) {
-  .hide-md {
-    display: none;
-  }
   .navbar {
     padding-left: 15px;
   }

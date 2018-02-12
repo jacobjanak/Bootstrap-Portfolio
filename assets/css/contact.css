@@ -1,8 +1,9 @@
+/* Contact */
+/* changing Bootstraps default colors to match our theme */
 .btn-primary {
   background-color: #4aaaa5;
   border: 0;
 }
-
 .btn-primary:hover {
   background-color: #2553A0;
 }

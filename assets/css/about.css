@@ -5,6 +5,13 @@
   width: 240px;
   height: auto;
 }
+
+/*
+  using the 'greater than' arrow in css means to apply styles
+  to anything that matches the selector on the right and also
+  has a parent that matches the selector on the left. In this case,
+  look for all 'img' elements that have a parent of #profile-picture
+*/
 #profile-picture > img {
   width: 100%;
   height: 100%;
