@@ -1,5 +1,5 @@
-# Homework-2
+# Bootstrap Portfolio Example
 
-Here is my version of the bootstrap portion on week 2's homework at the Trilogy bootcamp. Bootstrap 4 is brand new so I used this project as a learning oppurtunity.
+An example of a simple portfolio made with Bootstrap 4. I created this for my students at the UCSD coding bootcamp to help them with a homework assignment.
 
-https://jacobjanak.github.io/Bootstrap-Portfolio/
+https://jacobjanak.github.io/Bootstrap-Portfolio-Example/
